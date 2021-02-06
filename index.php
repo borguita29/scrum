@@ -5,7 +5,7 @@
 <body>	
 
 <div class="container-fluid pt-4" style="border: 1px solid black">
-	<h1 class=b4->DASHBOARDHAHA</h1>
+	<h1 class=b4->DASHBOARDHAHAAHAH</h1>
 </div>
 
 
