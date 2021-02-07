@@ -32,8 +32,8 @@ $sql2 = "INSERT INTO tbl_user_info (username, password)
 VALUES ('$username', '$password')";
 
 if (!$fname || !$nickname || !$age || !$gender || !$address || !$email || !$username || !$password) {
-	echo "FILL UP OTHER FIELDS";
-	exit;
+	echo '<div class="col-xl-12 alert alert-danger" role="alert" >YOU MUST FILL IN ALL THE FIELDS !!!</div>';
+	exit; 
 } else {
 
 	$query = mysqli_query($conn, $sql);

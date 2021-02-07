@@ -41,3 +41,17 @@
     top: 10px;
     right: 10px;
 }
+.registrationLabel {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.registrationTitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.background {
+    background-color: whitesmoke;
+}
