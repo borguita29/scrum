@@ -69,7 +69,7 @@
 								</div>
 							</div>
 
-							<div class="form-group col-md-6">
+							<div class="form-group col-xl-12 text-center">
 								<p class="text-danger registrationLabel" id="error"></p>
 							</div>
 					</div>
