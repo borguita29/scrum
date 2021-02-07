@@ -46,18 +46,19 @@
 										<span class="input-group-text bg-primary"><i class="fa fa-envelope text-light"></i></span>
 									</div>
 									<input class="form-control registrationLabel" name="email" id="email">
-								<div>
-							</div>
-							<div class="form-group col-xl-12">
-								<label for="uname" class="registrationLabel">USERNAME :</label>
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text bg-primary"><i class="fa fa-user text-light"></i></span>
-									</div>
-										<input class="form-control registrationLabel" name="username" id="uname">
-									</div>
 								</div>
 							</div>
+
+							<div class="form-group col-xl-12">
+								<label for="uname" class="registrationLabel">USERNAME :</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text bg-primary"><i class="fa fa-user text-light"></i></span>
+										</div>
+											<input class="form-control registrationLabel" name="username" id="uname">
+									</div>
+							</div>
+						
 							<div class="form-group col-xl-12">
 								<label for="pword" class="registrationLabel">PASSWORD :</label>
 								<div class="input-group">
@@ -65,17 +66,18 @@
 										<span class="input-group-text bg-primary"><i class="fa fa-key text-light"></i></span>
 									</div>
 										<input type="password" class="form-control registrationLabel" name="password" id="pword">
-									</div>
 								</div>
 							</div>
+
 							<div class="form-group col-md-6">
 								<p class="text-danger registrationLabel" id="error"></p>
 							</div>
 					</div>
+
 					<div class="form-group text-center">
 						<button type="submit" id="regsubmit" class="btn btn-primary registrationLabel">SUBMIT</button>
 					</div>
-					</div>
+				</div>
 			</form>
 		</div>
 	</div>
