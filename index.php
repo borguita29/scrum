@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-sm"></div>
 		<div class="mt-5 col-sm" style="border: 1px solid black">
-			<h1 class="pt-5 text-center">SCRUM.IO</h1>
+			<h1 class="pt-5 text-center">SCRUM.IOOOOO</h1>
 			<label class="pt-5" for=username>USERNAME:</label>
 			<input type="text" class="form-control mb-3" name="username">
 
