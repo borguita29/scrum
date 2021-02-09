@@ -46,12 +46,31 @@
     letter-spacing: 2px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+<<<<<<< HEAD
 .registrationTitle {
+=======
+.registrationTitle{
+>>>>>>> 7e1c2ac8b46446e5a213d52c6d2d46c1dbe439b6
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 4px;
     color: white;
 }
 
+<<<<<<< HEAD
 .background {
     background-color: whitesmoke;
+=======
+.registrationBg {
+    background-color: whitesmoke;
+}
+
+.loginTitle {
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 10px;
+}
+
+.loginLabel {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+>>>>>>> 7e1c2ac8b46446e5a213d52c6d2d46c1dbe439b6
 }

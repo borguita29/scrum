@@ -1,30 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SCRUM.IO</title>
-        <link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css"></link>
-        <link rel="stylesheet" href="Asset/css/general.css"></link>
-        <link rel="stylesheet" href="toastr/toastr.css"></link>
-        <script src="Asset/bootstrap/js/jquery.js"></script>
-        <script src="Asset/bootstrap/js/popper.min.js"></script>
-        <script src="Asset/bootstrap/js/bootstrap.min.js"></script>
-        <script src="toastr/toastr.min.js"></script>
+<?php  
 
-    </head>
+include 'header.php';
+
+?>
+
     <body>
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">                   
-                <div class="col-xl-3" >
-                    <form class="form-group ">
-                        <input class="form-control mb-2 username" type="text" name="username" id="username" placeholder="Username">
-                        <input class="form-control mb-2 password" type="password" name="password" id="password" placeholder="Passcode">
-                        <button class="btn btn-success mb-2 submit" type="button">Submit</button>      
-                    </form>
-                </div> 
+        <div class="container mt-5 header">
+        <div class="row">
+            <div class="col-xl-4 offset-xl-4">
+                <h1 class="pt-5 text-center loginTitle ">SCRUM.IO</h1>
+                <hr></hr>
+                <form class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-user"></i>
+                        </div>
+                        <input type="text" class="form-control loginLabel username" name="username" placeholder="USERNAME">
+                    </div>
+                    <hr></hr>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-key"></i>
+                        </div>
+                        <input type="password" class="form-control loginLabel password" name="password" placeholder="PASSWORD">
+                    </div>
+                    <hr></hr>
+                    <div>
+                        <button type="button" class="submit col-xl-12 btn btn-secondary loginLabel mb-2">LOGIN</button>
+                        <button class="col-xl-12  btn btn-secondary loginLabel" onclick="window.location = 'registration.php' ">REGISTER</button>
+                    </div>
+                </form>
             </div>
-        </div>   
+        </div>
+    </div>  
     </body>
 </html>
 <script>
@@ -42,19 +50,20 @@
                     url: "loginfunction.php",
                     dataType: "JSON", 
                     success: function(data){
-                        if(data == 2){
+                        if(data.Type == 2){
                             toastr.error("It seems your credentials is Mispelled", "Login Error:");
-                        } else if (data == 1) {
-                            if (data == "User") {
-                                window.location('http://localhost/scrumio/user/index.php');
-                            } else if (data == "Member") {
-                                
-                            } else if (data == "Group Leader") {
-                                
-                            } else if (data == "Admin") {
-                                
-                            } else if (data == "Superadmin") {
-                                
+                        } else if (data.Type == 1) {
+                            
+                            if (data.Access == "User") {
+                                window.location.href = 'user/index.php';
+                            } else if (data.Access == "Member") {
+                                window.location.href = 'member/index.php';
+                            } else if (data.Access == "Group Leader") {
+                                window.location.href = 'master/index.php';
+                            } else if (data.Access == "Admin") {
+                                window.location.href = 'admin/index.php';
+                            } else if (data.Access == "Superadmin") {
+                                window.location.href = 'superadmin/index.php';
                             }
                         }
                     }
@@ -63,3 +72,4 @@
         });
     });
 </script>
+    
