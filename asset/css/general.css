@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+}
+#divCostumMax {
+    height: 100vh;
+    
+}
+.divCostumSub {
+    height: 100vh;
+}
+#divCostumSponsor {
+    height: 60vh;
+}
+#divCostumSponsorLogo {
+    height: 25vh;  
+}
+#divCostumDev {
+    height: 102vh;
+}
+#divCostumFooter {
+    height: 30vh;
+}
+#divCostumFeatures {
+    height: 70vh;
+}
+#divCostumHeader {
+    height: 15vh;
+}
+#divCostumAvatar{
+    height: 35vh;
+}
+
+.imgHolder{
+    filter: brightness(50%);
+    width: 100%;
+    /* position: absolute; */
+}
+.sample{
+    position: absolute;
+    transform: scale(4, 6);
+    color: white;
+    letter-spacing: 1vw;
+    line-height: 3vw;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);   
+    font-weight: 370;
+}
+
+.costumColor{
+    color: #fae025;
+}

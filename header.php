@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>SCRUM.IO</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css" />
-	<link rel="stylesheet" href="toastr/toastr.css" />
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="asset/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="asset/fontawesome/css/all.css" />
+	<link rel="stylesheet" href="asset/toastr/toastr.css" />
 	
 
-	<script src="js/jquery.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="toastr/toastr.min.js"></script>
+	<script src="asset/js/jquery.js"></script>
+	<script src="asset/js/popper.js"></script>
+	<script src="asset/bootstrap/js/bootstrap.min.js"></script>
+	<script src="asset/toastr/toastr.min.js"></script>
 
 
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
