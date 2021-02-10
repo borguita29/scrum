@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NAMU</title>
+        <title>SCRUM</title>
         <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css"></link>
         <link rel="stylesheet" href="asset/css/general.css"></link>
         <script src="asset/js/jquery.js"></script>
@@ -19,17 +19,17 @@
                         <video autoplay muted loop id="divCostumMax" class="imgHolder" style="object-fit: fill;">
                             <source src="asset/videos/vbg.mp4" type="video/mp4">
                         </video>
-                        <p class="sample"><span class="costumColor"><</span>NAMU<span class="costumColor">/></span></p>
+                        <p class="sample"><span class="costumColor"><</span>SCRUM<span class="costumColor">/></span></p>
                     </div>
                 </div>
                 <div class="col-xl-12 contentHolder" style="height: 60vh;">
                     <div class="" style="margin-top:30vh;">
                         <div class=" d-flex justify-content-center" id="">
-                            <p class="textHolderC"><i>Make your life a bit easier with <span class="costumColor">NAMU</span> app</i></p>
+                            <p class="textHolderC"><i>Make your life a bit easier with <span class="costumColor">SCRUM.IO</span> app</i></p>
                             
                         </div>
                         <div class=" d-flex justify-content-center">
-                            <p class="textHolder"><i>Make your life a bit easier with <span class="costumColor">NAMU</span> app</i></p>
+                            <p class="textHolder"><i>Make your life a bit easier with <span class="costumColor">SCRUM.IO</span> app</i></p>
                             
                         </div>
                         <div class=" d-flex justify-content-center col-xl-12">
@@ -57,7 +57,7 @@
                 <div class="col-xl-12 col-sm-12 contentText" style="height: 60vh;">
                     <div class="d-flex justify-content-center align-items-center" style="margin-top:30vh;">
                         
-                            <p class="initText"><i><i>Namu builds a <span class="costumColor">Competitive</span> and <span class="costumColor">Innovative</span> Development Team <span class="costumColor"></i></i></p>
+                            <p class="initText"><i><i>SCRUM.IO builds a <span class="costumColor">Competitive</span> and <span class="costumColor">Innovative</span> Development Team <span class="costumColor"></i></i></p>
                             <p class="secondText"><i>Where clients <span class="costumColor">Ideas</span> always<span class="costumColor"> Matters.</span></i></p>
                         
                         
@@ -122,7 +122,7 @@
                     <div class="d-flex justify-content-center align-items-center" style="margin-top:30vh;">
                         <p style="position:absolute">
                             <i>
-                                <b>Namu</b> helps you to build a <span class="costumColor">Competitive</span> and <span class="costumColor">Innovative</span> Development Team. <span class="costumColor">    
+                                <b>SCRUM.IO</b> helps you to build a <span class="costumColor">Competitive</span> and <span class="costumColor">Innovative</span> Development Team. <span class="costumColor">    
                             </i>
                         </p>
                     </div>
