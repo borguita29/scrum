@@ -37,7 +37,7 @@ body, html {
 }
 .sample{
     position: absolute;
-    transform: scale(4, 6);
+    transform: scale(3, 6);
     color: white;
     letter-spacing: 1vw;
     line-height: 3vw;
