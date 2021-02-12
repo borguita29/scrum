@@ -34,25 +34,42 @@
 			);
 			echo json_encode($array);
 		} else {
-			// Initial Query
-			$queryInit = "INSERT INTO tbl_user (name, nickname, age, gender, address, email) 
-			VALUES ('$fname', '$nickname', '$age', '$gender', '$address', '$email')";
-			// Fetching Initial Query Result
-			$resultInit = $conn->query($queryInit);
-			// Checking if initial result has Data
-			if ($resultInit === TRUE) {
-				// If initial result has data. Insert Secondary info to the second database.
-				$QuerySec = "INSERT INTO tbl_user_info (username, password, access_type)
-				VALUES ('$username', '$password', 'User')";
-				// Fetching secondary Query Result
-				$resultSec = $conn->query($QuerySec);
-				// Checking if Secondary Query Result has result
-				if ($resultSec === TRUE) {
-					$array = array(
-						'code' => 3,
-						'message' => "Registration Success."
-					);
-					echo json_encode($array);
+			// Generating Account ID
+			$queryID = "SELECT MAX(id) as id FROM tbl_user_info";
+			// Fetching Result
+			$resultID = $conn->query($queryID);
+			// Checking if fetched result has data
+			if ($resultID->num_rows > 0) {
+				while($row = $resultID->fetch_assoc()) {
+
+					// Peeling Last ID and incrementing by 1 to get current user Account ID
+					$idCom 	= $row['id'];
+					$id = $idCom + 1;
+					// Variable Declaration for YMD
+					$Curday = date("Ymd");
+					// Appending YMD and Last id to formulate last Account_id
+					$account_id = $Curday.$id;
+							// Initial Query
+					$queryInit = "INSERT INTO tbl_user (account_id, name, nickname, age, gender, address, email) 
+					VALUES ('$account_id', '$fname', '$nickname', '$age', '$gender', '$address', '$email')";
+					// Fetching Initial Query Result
+					$resultInit = $conn->query($queryInit);
+					// Checking if initial result has Data
+					if ($resultInit === TRUE) {
+						// If initial result has data. Insert Secondary info to the second database.
+						$QuerySec = "INSERT INTO tbl_user_info (account_id, username, password, access_type)
+						VALUES ('$account_id', '$username', '$password', 'User')";
+						// Fetching secondary Query Result
+						$resultSec = $conn->query($QuerySec);
+						// Checking if Secondary Query Result has result
+						if ($resultSec === TRUE) {
+							$array = array(
+								'code' => 3,
+								'message' => "Registration Success."
+							);
+							echo json_encode($array);
+						}
+					}
 				}
 			}
 		}

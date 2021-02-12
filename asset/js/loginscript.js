@@ -53,6 +53,69 @@ $(document).ready(function(){
             }
         }
     });
+    // Modal Configuration
+    $(".credentialDetails").hide();
+    $('.Register').mouseenter(function(){
+        $(this).css('cursor', 'pointer');
+        $('.Register').on("click", function(){
+            $('#registrationModal').modal('show')
+        });
+    });
+    $(".Proceed").click(function(){
+        $(".initialDetails").hide();
+        $(".credentialDetails").show();
+    });
+    $(".return").click(function(){
+        $(".credentialDetails").hide();
+        $(".initialDetails").show();
+    });
+    // Handle onclick submit
+    $(".regsubmit").click(function() {
+        // variable declaration
+        let name = $(".name").val();
+        let nickname = $(".nickname").val();
+        let age = $(".age").val();
+        let address = $(".address").val();
+        let usernameReg = $(".usernameReg").val();
+        let passwordReg = $(".passwordReg").val();
+        // Validate if all text form has value
+        if(name == "" || nickname == "" || age == "" || address == "" || usernameReg == "" || passwordReg == ""){
+            toastr.error("Please fill up the form.", "Fatal Error:");
+        } else {
+            // validate if there is an exising special character on the input
+            if (/^[a-zA-Z0-9- ]*$/.test(name) == false || /^[a-zA-Z0-9- ]*$/.test(nickname) == false || /^[a-zA-Z0-9- ]*$/.test(usernameReg) == false || /^[a-zA-Z0-9- ]*$/.test(passwordReg) == false) {
+                toastr.warning("Field must not contain any special character except the address.", "Minor Error:");
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: "registration_function.php",
+                    dataType: "JSON",
+                    data: $("#regform").serialize(),
+                    success: function(data) {
+                        var message = data.message;
+                        var code = data.code;
+                        switch (code) {
+                            case 1:
+                                toastr.warning(message, "Registration Error:");
+                            break;
+                            case 2:
+                                toastr.warning(message, "Registration Error:");
+                            break;
+                            case 3:
+                                toastr.success(message, "Registration Success:");
+                                window.setTimeout(function() {
+                                    window.location.href = 'login.php';
+                                }, 1500);
+                            break;
+                        
+                            default:
+                            break;
+                        } 
+                    }
+                });
+            }
+        }
+    });
 });
 
     

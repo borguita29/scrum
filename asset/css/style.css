@@ -1,0 +1,107 @@
+.formLogin {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important; 
+    border-image-slice: 1;
+    border-width: 2.5pt;
+    border-image-source: linear-gradient(49deg, rgba(105,15,144,0.9864320728291317) 0%, rgba(163,60,201,1) 50%, rgba(252,195,254,1) 100%);
+}
+.formLogin:focus {
+
+    outline: none;
+    
+}
+.btnCustom{
+    display: inline-block;
+    font-weight: 400;
+    color: White;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    padding: .475rem .475rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btnHolder{
+    display: inline-block;
+    font-weight: 400;
+    color: White;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    padding: .475rem .475rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.buttonProceed{
+    color: #fff;
+    background: rgb(151,80,182);
+    background: linear-gradient(90deg, rgba(151,80,182,0.9864320728291317) 0%, rgba(178,75,219,1) 39%, rgba(184,64,222,1) 52%, rgba(207,6,214,0.8631827731092436) 100%);
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+}
+.desc-container{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+.buttonFacebook{
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+    background: rgb(27,104,190);
+    background: linear-gradient(90deg, rgba(27,104,190,0.9864320728291317) 0%, rgba(41,125,201,1) 38%, rgba(65,137,228,1) 75%, rgba(56,153,212,1) 100%);}
+.buttonTwitter{
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Comfortaa', cursive;
+    background: rgb(29,175,198);
+    background: linear-gradient(90deg, rgba(29,175,198,0.9864320728291317) 0%, rgba(41,170,201,1) 26%, rgba(58,185,222,1) 61%, rgba(116,246,246,1) 100%);
+    
+}
+.bgImg  {
+    background-image: url("../images/bgLogin.jpg");
+    background-color: #cccccc;
+    background-repeat: 0;
+    
+  }
+.bgWhite{
+    background-color: white;
+}
+.footer-holder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: #a6a6a6;
+}
+#buttonClose{
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+    background: rgb(22,26,74);
+background: linear-gradient(90deg, rgba(22,26,74,0.9864320728291317) 0%, rgba(30,26,106,1) 47%, rgba(47,76,152,1) 79%, rgba(56,153,212,1) 100%);
+    
+}
+.imgHolder{
+    filter: brightness(10%);
+}

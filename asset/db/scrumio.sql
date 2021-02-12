@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2021 at 11:39 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Feb 10, 2021 at 08:04 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -239,14 +239,28 @@ CREATE TABLE `tbl_user` (
   `age` int(55) NOT NULL,
   `gender` enum('MALE','FEMALE') NOT NULL,
   `address` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `user_status` enum('Activated','Inactive') NOT NULL,
-  `account_status` enum('Verified','Not Verified') NOT NULL,
+  `email` varchar(55) NOT NULL,
+  `user_status` enum('Activated','Inactive') NOT NULL DEFAULT 'Activated',
+  `account_status` enum('Verified','Not Verified') NOT NULL DEFAULT 'Not Verified',
   `verified_by` varchar(255) NOT NULL,
   `verified_at` datetime NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`id`, `team_id`, `account_id`, `image_id`, `name`, `nickname`, `age`, `gender`, `address`, `email`, `user_status`, `account_status`, `verified_by`, `verified_at`, `created_at`, `updated_at`) VALUES
+(1, 0, 262021, 0, 'Rara', 'Rara', 21, 'MALE', '123', '', 'Activated', 'Verified', 'asd', '2021-02-06 11:47:48', '2021-02-06 11:47:48', '2021-02-06 11:47:48'),
+(2, 0, 0, 0, 'rara', 'rara', 12, 'FEMALE', 'asd', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 0, 0, 0, 'rara', 'rara', 12, 'FEMALE', 'asd', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 0, 0, 0, 'asd', 'asd', 12, 'FEMALE', 'asd', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 0, 0, 0, 'asd asd', ' asd asd ', 12, 'MALE', 'asd asd asd ', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 0, 0, 0, 'srara', 'rara', 12, 'FEMALE', 'rara', 'rara@rara.rara', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 0, 0, 0, 'asddd', 'dsa', 12, 'MALE', '123', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(8, 0, 0, 0, 'ddrara', 'rara', 12, 'MALE', 'asd ', 'asd@asd.asd', 'Activated', 'Not Verified', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -259,10 +273,27 @@ CREATE TABLE `tbl_user_info` (
   `account_id` int(55) NOT NULL,
   `username` varchar(55) NOT NULL,
   `password` varchar(55) NOT NULL,
-  `access_type` enum('User','Member','Group Leader','Admin','Superadmin') NOT NULL,
-  `created_at` date NOT NULL DEFAULT current_timestamp(),
+  `access_type` enum('User','Member','Group Leader','Admin','Superadmin') NOT NULL DEFAULT 'User',
+  `created_at` date NOT NULL,
   `updated_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_user_info`
+--
+
+INSERT INTO `tbl_user_info` (`id`, `account_id`, `username`, `password`, `access_type`, `created_at`, `updated_at`) VALUES
+(1, 262021, 'rara', 'rara', 'User', '2021-02-06', '2021-02-06'),
+(2, 0, 'dsa', 'asd', 'User', '0000-00-00', '0000-00-00'),
+(3, 0, 'asd', '@', 'User', '0000-00-00', '0000-00-00'),
+(4, 0, 'asd', '@', 'User', '0000-00-00', '0000-00-00'),
+(5, 0, 'rara', 'arar', 'User', '0000-00-00', '0000-00-00'),
+(6, 0, 'rara', 'arar', 'User', '0000-00-00', '0000-00-00'),
+(7, 0, 'asd', 'asd', 'User', '0000-00-00', '0000-00-00'),
+(8, 0, 'asd', 'asd', 'User', '0000-00-00', '0000-00-00'),
+(9, 0, 'srara', 'rara', 'User', '0000-00-00', '0000-00-00'),
+(10, 0, 'asdasdasd', 'asdasda', 'User', '0000-00-00', '0000-00-00'),
+(11, 0, 'asdasdasdasdasd', 'asd', 'User', '0000-00-00', '0000-00-00');
 
 --
 -- Indexes for dumped tables
@@ -408,13 +439,13 @@ ALTER TABLE `tbl_sprint`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_user_info`
 --
 ALTER TABLE `tbl_user_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
