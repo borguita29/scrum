@@ -116,8 +116,6 @@ background: linear-gradient(90deg, rgba(22,26,74,0.9864320728291317) 0%, rgba(30
     min-width: 250px;
     max-width: 250px;
     background-color: lightblue;
-    height: 100vh;
-    z-index: 9999;
     transition: all 0.4s;
 }
 
